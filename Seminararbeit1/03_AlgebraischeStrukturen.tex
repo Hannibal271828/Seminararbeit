@@ -1,0 +1,106 @@
+\chapter{Algebraische Strukturen}
+\label{sec:Algebraische Strukturen}
+Wir werden uns mit der fundamentalsten aller algebraischen Strukturen, den Gruppen, befassen, um mit einem Zwischenstopp bei den Körpern die sogenannten Vektorräume über einen Körper $K$ zu definieren.
+\section{Gruppen}
+\label{sec:Gruppen}
+Gruppen ermöglichen eine Abstrahierung von Rechenoperationen. Ebenso muss diese algebraische Struktur bestimmte Eigenschaften erfüllen, die im Folgenden nach einigen grundlegenden Definitionen neuer Begriffe aufgeführt werden.
+
+\theoremstyle{definition}
+\begin{definition}{\textbf{Kartesisches Produkt}}
+	\\{\glqq}Das kartesische Produkt $A\times B$ zweier Mengen $A$ und $B$ ist die Menge aller geordneten Paare $(a,b)$ mit $a \in A$ und $b \in B$: \[A \times B := \{(a,b) \mid a \in A, b \in B\} \text{.{\grqq} \cite[S. 28]{Enzy}}\]
+\end{definition}
+
+%Fußnote, die auf Beispiel bei den VRs hinweist
+\theoremstyle{bem}
+\begin{bem}{}
+Es kommt auf die Reihenfolge innerhalb des Paares an. Somit gilt $(a,b) \not= (b,a)$.
+\end{bem}
+In Abschnitt \ref{exampleVR} werden weitere Beispiele für das kartesische Produkt aufgeführt.
+
+\theoremstyle{definition}
+\begin{definition}{\textbf{innere Verknüpfung}}
+	\\{\glqq}Eine (innere) Verknüpfung auf einer Menge $G$ ist eine Abbildung[\footnote{Das Wort Abbildung ist ein Synonym zu Funktion.}]
+\begin{center}
+$\mu: G \times G \rightarrow G $ .{\grqq} \cite[S. 19, 4.1]{Skript}
+\end{center}
+\end{definition}
+
+\theoremstyle{bem}
+\begin{bem}{}
+Aus der Abbildungsvorschrift geht hervor, dass einem Paar $(g_1,g_2)$ ein Element $\mu((g_1,g_1))$, {\textendash} stattdessen schreiben wir auch $g_1 \, \cdot \, g_2$, $g_1 \, + \, g_2$ oder $g_1 \, \circ \, g_2$ {\textendash}, aus der Zielmenge zugeordnet wird (vgl. \cite[S. 19, 4.1]{Skript}).
+\end{bem}
+
+\theoremstyle {definition}
+\begin{definition} {\textbf{Gruppe}
+	\\ {\glqq}Eine Gruppe ist eine Menge $G$ mit einer Verknüpfung 
+\begin{center}
+$\circ$[\footnote{Die innere Verknüpfung wird als \glqq $\circ$\grqq \, bezeichnet. Anstatt des Zeichens kann eine Rechenoperation wie $+$ oder $\cdot$ verwendet werden.}]$ : G \times G \rightarrow G$ 
+\end{center}
+für die die folgenden Eigenschaften gelten
+\begin{enumerate}
+	\item (Assoziativität) Für alle $x, y, z \in G$ gilt 	
+	\label{(i)}
+	\[(x \circ y) \circ z = x \circ (y \circ z)\text{.}\]
+	\item (Existenz eines neutralen Elements) Es gibt ein $e \in G$ mit  
+	\label{(ii)}	
+	\[e \circ x = x = x \circ e \,\text{für alle}\, x \in G \text{.}\]
+	\item (Existenz von Inversen) Sei $x \in G$. Dann gibt es ein $y \in G$ mit 
+	\label{(iii)}	
+	\[y \circ x = e = x \circ y \text{.{\grqq} \cite[S. 19, 4.2]{Skript}}\]
+\end{enumerate}
+}\end{definition}
+
+\theoremstyle{definition}
+\begin{definition}{\textbf{abelsche oder kommutative Gruppe}}
+	\\Man bezeichnet eine Gruppe auch als kommutativ oder abelsch, wenn für alle $a,b \in G$ gilt
+\[a \circ b = b \circ a\text{. \cite[S. 19, 4.3]{Skript}}\]
+\end{definition}
+
+Im weiteren Verlauf werden einige Beispiele für Gruppen aufgeführt.
+\theoremstyle{example}
+\begin{example}{}
+Die Verknüpfung $+$ auf der Menge der natürlichen Zahlen $\mathbb{N}$ erfüllt die Eigenschaften 
+(\ref{(i)}), (\ref{(ii)}) {\textendash} das neutrale Element ist hierbei die Zahl $0$ {\textendash} , aber nicht (\ref{(iii)}), weil das Inverse einer natürlichen Zahl $n$ die Lösung der Gleichung $n + x = 0 = x + n $ für $x \in \mathbb{N}$ ist, wobei $ x = -n$ ergibt, aber $-n \not\in \mathbb{N}$, sondern $-n \in \mathbb{Z}$. Somit ist die Verknüpfung $+$ auf der Menge der ganzen Zahlen, man schreibt auch $(\mathbb{Z}, +)$, eine Gruppe. Insbesondere ist sie \emph{kommutativ} oder \emph{abelsch}.
+\end{example}
+
+\theoremstyle{example}
+\begin{example}{}
+Ebenso bildet die Verknüpfung $\cdot$ (die Multiplikation) auf der Menge der rationalen Zahlen $\mathbb{Q}\setminus\{0\}$  eine \emph{kommutative} Gruppe. Das neutrale Element bezüglich der Addition ist die $1$, das auch als {\glqq}Einselement{\grqq} \cite[S.  20, 4.1]{Skript} bezeichnet wird. Die Null ist ausgeschlossen, weil sie kein Inverses hat, also eine Zahl aus $\mathbb{Q}$, die multipliziert mit Null das $1$ ergibt, existiert nicht. Der Kehrbruch einer beliebigen rationalen Zahl ist sein inverses Element.
+\end{example}
+
+\theoremstyle{example}
+\begin{example}{}
+Da $\mathbb{Z}, \, \mathbb{Q}\setminus\{0\} \subset \mathbb{R}$ sind, folgt insbesondere, dass $(\mathbb{R},+)$ und $(\mathbb{R}\setminus\{0\}, \, \cdot \,)$ abelsche Gruppen sind. 
+\end{example}
+
+Aus dem letzten Beispiel geht hervor, dass es einfacher wäre zwei verschiedene Verknüpfungen  $+$ und $\cdot$ auf einer Menge $K$ für die Addition bzw. auf der Menge $K\setminus\{0\}$ für die Multiplikation in eine  neue algebraische Struktur zusammenzufasssen. Diese nennen wir wie folgt:
+
+\section{Körper}
+%Quelle: https://www.youtube.com/watch?v=qpFyN7XkFEA&index=14&list=PLLTAHuUj-zHgrxnm5NRR_vXH-pJ9ZrrvD
+\label{sec:Körper}
+\theoremstyle{defintion}
+\begin{definition}{\textbf{Körper}}
+Ein Körper besteht aus zwei Mengen $K$ und $K\setminus\{0\}$ mit zwei Verknüpfungen
+\begin{align*}
+	+&: K \times K \rightarrow K
+	\\ \cdot &: K \times K \rightarrow K
+\end{align*}
+
+für die gelten:
+\begin{enumerate}
+\item $(K,+)$ ist eine abelsche Gruppe mit $e=0$ als das neutrale Element.
+\item $(K\setminus\{0\}, \cdot)$ ist eine kommutative Gruppe mit dem Einselement $e=1$ als das neutrale Element.
+\item(Distrivbutivgesetze)
+Für alle $a, b, c \in K$ gilt
+\begin{align*}
+a \cdot (b+c)  &= a \cdot b + a \cdot c
+\\ (a+b) \cdot c &= a\cdot c + b \cdot c \text{\, . (vgl. \cite{Körper})}
+\end{align*}
+\end{enumerate}
+\end{definition}
+
+\theoremstyle{example}
+\begin{example}
+Die Menge der rationalen Zahlen $\mathbb{Q}$ und der reellen Zahlen $\mathbb{R}$ bilden mit der uns geläufigen Addition und Multiplikation offensichtlich\footnote{Der Beweis ist nicht Gegenstand dieser Seminararbeit.} einen Körper. (vgl. \cite[S. 26]{Beutel})
+\end{example}
+

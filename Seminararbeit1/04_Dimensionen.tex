@@ -1,0 +1,262 @@
+\chapter{Vektorräume}
+\label{sec:VR}
+
+\section{Vektorräume}
+\label{sec:Vektorräume}
+\theoremstyle{definition}
+\begin{definition}{\textbf{Vektorraum}}
+\\{\glqq}Sei $K$ ein Körper. Ein Vektorraum[\footnote{Über den Vektoren befinden sich in der höheren Mathematik keine Pfeile mehr und man notiert sie, um Platz zu sparen, meist waagrecht.}] über K (oder $K$-Vektorraum) ist eine kommutative Gruppe $(V,+)$[\footnote{Vektoraddition}] zusammen mit einer äußeren Verknüpfung 
+	\begin{align*}
+	\cdot : K \times V &\rightarrow V
+	\\ (\lambda,v) &\mapsto \lambda \cdot v
+	\end{align*}
+(genannt Skalarmultiplikation) mit folgenden Eigenschaften: Für alle $\lambda, \lambda_1, \lambda_2 \in K$ und $v, v_1, v_2 \in V$ gilt
+	\begin{enumerate}
+		\item $(\lambda_1 + \lambda_2) \cdot v = \lambda_1 \cdot v + 	\lambda_2 \cdot v $
+		\item $ \lambda \cdot (v_1 + v_2) = \lambda \cdot v_1 + \lambda \cdot v_2$
+		\item $\lambda_1 \cdot (\lambda_2 \cdot v) = (\lambda_1 \cdot \lambda_2) \cdot v$
+		\item $ 1 \cdot v = v$.{\grqq} \cite[S. 28, 6.1]{Skript}
+	\end{enumerate}
+\end{definition}
+
+\theoremstyle{bem}
+\begin{bem}{}
+Vektorräume beinhalten zwei verschiedene Additionen und Multiplikationen, die allerdings aus Gründen der Übersichtlichkeit nicht extra gekennzeichnet werden. Zum einen gibt es die Addition in $K$ und in $V$, ebenso die Multiplikation in $K$, zum anderen die sogenannte Skalarmultiplikation\footnote{Wir kennen sie unter der Streckung oder Stauchung eines Vektors mit einem Skalar.} \(\lambda \cdot v \) für $\lambda \in K$ und $v \in V$. (vgl. \cite[S. 28, 6.1]{Skript})
+\end{bem}
+
+\theoremstyle{definition}
+\begin{definition}{\textbf{Mehrfaches kartesisches Produkt}}
+\label{exampleVR}
+	\\Das mehrfache kartesische Produkt einer Menge $K$ wird wie folgt definiert:
+\[\underbrace{K \times K \times ... \times K}_{n\text{-mal}} := K^n \text{. (vgl. \cite[S. 28]{Enzy})}\]
+\end{definition}
+
+\theoremstyle{example}
+\begin{example}{$n$-faches kartesisches Produkt als $K$-Vektorraum}
+Sei $K$ ein Körper. Für $n \in \mathbb{N}$ machen wir \[\text{{\glqq}} K^n = \{(x_1,...,x_n) \mid x_1,...,x_n \in K\} \text{{\grqq}} \, \text{\cite[S. 28, 6.2]{Skript}}\]zu einem $K$-Vektorraum mit folgender Definition von komponentenweisen Addition
+\[\text{{\glqq}}(x_1,...,x_n)+(y_1,...,y_n) := (x_1 + y_1,x_2 + y_2,..., x_n + y_n)\text{{\grqq}}\, \text{\cite[S. 28, 6.2]{Skript}}\]
+und Skalarmultiplikation
+\[\text{{\glqq}}\lambda \cdot (x_1,...,x_n):= (\lambda x_1,\lambda x_2,...,\lambda x_n)\text{{\grqq}} \, \text{\cite[S. 28, 6.2]{Skript}.}\]
+\end{example}
+
+\theoremstyle{example}
+\begin{example}{Ebene und Raum} \label{KoS}
+\begin{figure}[h]
+\begin{minipage}[t]{.5\textwidth}
+\begin{tikzpicture}[scale=2]
+   % Draw axes
+   \draw [<->,thick] (0,2) node (yaxis) [above] {$y$}
+       |- (2,0) node (xaxis) [right] {$x$};
+   \coordinate (1) at (1,1);
+   % Draw lines indicating intersection with y and x axis. Here we use
+   % the perpendicular coordinate system
+   \draw[dashed] (yaxis |- 1) node[left] {$y'$}
+       -| (xaxis -| 1) node[below] {$x'$};
+   % Draw a dot to indicate intersection point
+   \fill[red] (1) circle (2pt);
+      \draw (1,1.2) node {$(x',y')$};
+	
+\end{tikzpicture}
+\captionsetup{singlelinecheck=off}
+\caption{$\mathbb{R}^2=\mathbb{R} \times \mathbb{R}$}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.45\textwidth}
+\begin{tikzpicture} [scale=3]
+    \draw [->] (0,0) -- (1,0,0) node [right] {$x_2$};
+    \draw [->] (0,0) -- (0,1,0) node [above] {$x_3$};
+    \draw [->] (0,0) -- (0,0,1.5) node [below left] {$x_1$};
+    \coordinate (2) at (1,1,1);
+    \fill[red] (2) circle (1pt);
+    \draw[red] (0,0,0) -- (0,0,1) -- (1,0,1) -- (1,1,1);
+\end{tikzpicture}
+\caption{$\mathbb{R}^3=\mathbb{R} \times \mathbb{R} \times \mathbb{R}$}
+\end{minipage}
+\end{figure}
+Das uns bekannte zweidimensionale Koordinatensystem $\mathbb{R}^2$ ist das kartesische Produkt aus \(\mathbb{R} \times \mathbb{R}\). Jeder Punkt der $x$-$y$-Ebene lässt sich durch ein {\glqq}Paar von Koordinaten\footnote{Alternativ nennen wir es auch Tupel.}, $(x, y)$,{\grqq} \cite[S. 28]{Enzy} für alle ${x, y\in \mathbb{R}}$ beschreiben. Das dreidimensionale Koordinatensystem $\mathbb{R}^3$ ist das dreifache kartesische Produkt der Menge der reellen Zahlen. Die Koordinaten werden als {\glqq}Tripel{\grqq}  \cite[S. 28]{Enzy} $(x_1, x_2, x_3)$ für alle $x_1, x_2, x_3\in \mathbb{R}$ bezeichnet.
+\end{example}
+%Enzy zitieren
+
+%\theoremstyle{definition}
+%\begin{definition}{Untervektorraum}
+%\\ \glqq Wir nennen eine nichtleere Teilmenge $U \subset V$ \acl{UVR}, falls gilt 
+%\begin{enumerate}
+%\item  $0_V$ \footnote{\label{foot:8}Den Nullvektor kennzeichnen in diesem Fall wir mit $0_V$. Sonst schreiben wir eine $0$.} $\in U$.
+%\item $u,v \in U \Rightarrow u + v \in U$ (Abgeschlossenheit bzgl. +)
+%\item $u \in U \text{,} \, \lambda \in K \Rightarrow \lambda u \in U$ (Abgeschlossenheit bzgl. Skalarmultiplikation $\cdot$\,).\grqq
+%\end{enumerate} 
+%\end{definition}
+%Zitat aus S.298 Tut.
+%In Abb. \ref{UVR} sehen wir einen eindimensionalen \acl{UVR} des \acl{R2}.
+
+Der $\mathbb{R}^2$ und $\mathbb{R}^3$ (vgl. \ref{KoS}) kann mit Hilfe eines kartesischen Koordinatensystems sehr gut visualisiert werden. Funktioniert das beispielsweise auch für den $\mathbb{R}^4$, den $\mathbb{R}^5$ oder sogar den $\mathbb{R}^n$ ? Es fehlt uns lediglich die Vorstellungskraft über die übrigen Richtungen im größer-drei-dimensionalen Raum. In diesem Kapitel werden wir den Begriff der \acl{Dim} definieren.
+Auch lernen wir eine Möglichkeit, uns höherdimensionale Vektorräume \glqq formal\grqq \, vorzustellen.
+
+\section{\aclp{EZS}}
+\label{Erz}
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{150pt}
+\input{Bilder/Linkomb.pdf_tex}
+\caption{\(\sum \limits_{i=1}^{2} \lambda_i v_i = \lambda_1 v_1 + \lambda_2 v_2\), wobei hier $\lambda_1=\lambda_2=3$ ist}
+\label{linkombgrafik}
+\end{figure}
+
+Aus dem Schulunterricht kennen wir bereits den Begriff der Linearkombination, eine Summe aus mehreren gestreckt und gestauchten Vektoren, woraus wiederum ein neuer Vektor entsteht. Im Folgenden wird dieser Sachverhalt auf eine allgemeinere mathematische Ebene gebracht, sodass es für beliebig viele Vektoren aus jedem \acl{VR} und für beliebig viele Skalare aus jedem Körper gilt.
+
+\theoremstyle{definition}
+\begin{definition}{\textbf{\acl{Linkomb}}}
+\\Sei $K$ ein Körper, $V$ ein $K$-\acl{VR} und ${v_1,...,v_k \in V}$. Ein Vektor $v \in V$ lässt sich mit $v_1,...,v_k$ und den Koeffizienten $\lambda_i \in K$ für $i=1,...,k$ und $k \in \mathbb{N}$ wir folgt \emph{linear kombinieren}:
+\[v = \sum_{i=1}^k \lambda_i v_i = \lambda_1 v_1 + \lambda_2 v_2 + \lambda_3 v_3 + ... + \lambda_k v_k \text{. (vgl. \cite[S. 298, 16.3]{Tut})}\]
+\end{definition}
+%indir Zitat aus tutorium S.298 Def.16.3
+
+\theoremstyle{definition}
+\begin{definition}{\textbf{lineare Hülle}}
+	\\ Sei $V$ ein Vektorraum über den Körper $K$ und $A \subset V$. Die Menge aller \aclp{Linkomb} 
+\[\text{\glqq}\langle A \rangle_K := \{\sum \limits_{i=1}^{n} \lambda_i a_i \mid n \in \mathbb{N}, \lambda_i \in K, a_i \in X \,\text{für} \, i = 1,...,n \}\text{\grqq \cite[S. 30]{Bosch}}\]
+bezeichnen wir als den,  die {\glqq}\emph{lineare Hülle}{\grqq} \cite[S. 298, 16.4]{Tut}, das "\emph{Erzeugnis}" \cite[S. 298, 16.4]{Tut} oder den "\emph{Span}" \cite[S. 298, 16.4]{Tut} von $X$. 
+%indir Zit. aus Bosch S.30 
+\label{linhuelledef}
+\end{definition}
+
+\begin{figure} [!tbp]
+ 	\centering
+	\begin{minipage}[b]{0.4\textwidth}
+		\def\svgwidth{175pt}
+		\input{Bilder/LinHuelle.pdf_tex}
+		\caption{$\langle v \rangle_\mathbb{R} \in \mathbb{R}^2$ ist eine Gerade.} 
+		\label{fig:UVR}
+	\end{minipage}
+\hfill
+	\begin{minipage}[b]{0.4\textwidth}
+		\def\svgwidth{175pt}
+		\input{Bilder/2dKoS.pdf_tex}
+		\caption{\(E = \{e_1,e_2\} \subset \mathbb{R}^2 \Rightarrow \langle E \rangle_{\mathbb{R}} = \mathbb{R}^2\).}
+	\end{minipage}
+\end{figure} 
+%Man kümmere sich um die Bildunterschrift
+ 
+\theoremstyle{definition}
+\begin{definition}{\textbf{\acl{EZS}}}
+	\\"Eine Teilmenge $M$ eines $K$-Vektorraums $V$ heißt \acl{EZS} von $V$, wenn $V = \langle M \rangle_K$. $V$ heißt \emph{endlich erzeugt} [von $M$]\footnote{\label{foot:1}Sei $M = \{m_1, m_2, ..., m_n\}$ eine $n$-elementige Teilmenge von $V$ aus den Vektoren $m_1, m_2, ..., m_n$.}, wenn es ein endliches \acl{EZS} gibt." \cite[S. 39, 9.4]{Skript}
+\end{definition}
+
+%\theoremstyle{example}
+%\begin{example}{Zahlenmengen als Vektorräume?}
+%\end{example} 
+
+\theoremstyle{definition}
+\begin{definition}{\textbf{\acl{Linunab}}}
+\label{def:linunab}
+	\\ \glqq Sei $K$ ein Körper und $V$ ein $K$-\acl{VR}, $v_1, ..., v_k \in V$. Wie nennen das System $(v_1, ..., v_k)$ \emph{\acl{linunab}}, wenn gilt
+	\[\sum \limits_{i=1}^{k} \lambda_i v_i = 0 \Longrightarrow \lambda_i = 0 \,[...]\, \text{[für alle]}\, i \text{.}\]
+	Andernfalls heißt \((\acl{vs})\) \emph{\acl{linab}}.{\grqq} \cite[S. 298, 16.5]{Tut} 
+\end{definition}
+
+Sei eine Menge \acl{linunab} und sei dies zu überprüfen. So folgt ist die Gleichung in \ref{def:linunab} nur durch die {\glqq}trivial[e]{\grqq} \cite[S. 307, 16.5]{Tut} Lösung, also alle Koeffizienten $\lambda_i = 0$, lösbar.
+Sei dagegeben eine Menge \acl{linab} und sei dies zu überprüfen, dann ist mindestens ein $\lambda_i\not= 0$.
+An dieser Stelle sei für Beispiele auf diesen und diesen Abschnitt hingewiesen.
+
+
+\section{Basis}
+\label{sec:Basis}
+%Einleitungssatz zu Basis? Mit Lemma von Zorn beginnen?? 
+
+\theoremstyle{theo} \label{theo:Basis}
+\begin{theo}{\textbf{Basis}}
+\\ \glqq Sei $V$ ein $K$-\acl{VR}. Eine Teilmenge $B \subseteq V$ heißt Basis von $V$, wenn die folgenden äquivalenten Bedingungen gelten:
+		\begin{enumerate}
+		\item \label{Basis1} $B$ ist ein \emph{\acl{EZS} \emph{und} \acl{linunab}}.
+		\item \label{Basis2}$B$ ist [ein] \emph{minimales\footnote{Diese Eigenschaft gilt nicht mehr, wenn ein Element aus $B$ entfernt wird.} \acl{EZS}}.
+		\item \label{Basis3}$B$ ist [eine] \emph{maximale\footnote{Wird ein $v \in V$ zu $B$ hinzugefügt, so ist $B$ nicht mehr \acl{linunab}.} \acl{linunab}e Teilmenge}.{\grqq} \cite[S. 41, 9.16]{Skript}
+		\end{enumerate}
+\end{theo}
+
+Um das Theorem bestehend aus der Äquivalenzaussage (i) $\Leftrightarrow$ (ii) $\Leftrightarrow$ (iii) zu zeigen, reicht es den Beweis des sogenannten Ringschlusses für die Implikationen (i) $\Rightarrow$ (ii), (ii) $\Rightarrow$ (iii) und (iii) $\Rightarrow$ (i) zu führen.
+\\ Im folgenden erfolgen die Beweise alle durch Widerspruch. Um oftmals die Inkonsistenzen zu finden, bedarf es einer gründlichen Arbeit mit den Voraussetzungen, welche zur Vereinfachung gekennzeichnet werden.
+
+\begin{proof}  
+Vor.: Sei $B = \{\acl{vs}\}$. $B$ ist \acl{EZS} und \textbf{\acl{linunab}}.
+\\ Beh.: (i) $\Rightarrow$ (ii) 
+\\ Bew.: \acl{ang} $B$ ist nicht minimal. Dann ist $B$ ohne $v_k$ für $k=1,...,n$ immer noch ein \acl{EZS}:
+\\ Sei $\lambda_i \in K$ für $i=1,...,n$.
+\begin{align*}\Rightarrow v_k = \sum \limits_{\substack{i=1\\i\not=k}}^{n}\lambda_i v_i
+\Leftrightarrow 0 = \sum \limits_{\substack{i=1\\i\not=k}}^{n}\lambda_i v_i - v_k 
+\end{align*}
+\(\Rightarrow \lambda_k \not= 0 \Rightarrow \text{\textbf{linear abhängig}} \, \lightning
+\Rightarrow \text{Beh.} \)
+\\In Wortform: Der Nullvektor erhält somit eine nichttriviale Darstellung, da $\lambda_k=1\not=0$. Insbesondere ist das System $B$ mit $v_k$ für $k=1,...,n$ \textbf{linear abhängig}, was ein Widerspruch zu der Voraussetzung der linearen Unabhängigkeit ist, woraus folgt, dass die Behauptung wahr ist. (vgl. \cite[S. 41, 9.16 (a) $\Rightarrow$ (b)]{Skript})
+\\
+\\ Vor.: B ist ein \textbf{minimales \text{\acl{EZS}}}.
+\\ Beh.: (ii) $\Rightarrow$ (iii) 
+\\ Bew.: Zuerst zeigen wir, dass $B$ \acl{linunab} ist.
+\\ Angenommen $B$ ist \text{\acl{linab}}. Sei \(\lambda_i \, \text{für} \, i=1,...,n\). Dann hat die Gleichung \(\acl{Summe}=0\) mindestens ein $\lambda_i\not=0$ mit $i=1,...,n$ als Lösung.
+\\Wir nehmen o.B.d.A\footnote{Ohne Beschränkung der Algmeinheit. Wir schauen uns einfachheitshalber einen Spezialfall an, um die Aussage im Allgemeinen zu beweisen. Die anderen Fälle würden analog zu zeigen sein.} an:
+Sei $\lambda_j \not= 0$ für $j \in {1,...,n}$. $B$ ist linear abhängig aufgrund $v_j$. 
+\begin{align*}
+&\Rightarrow \lambda_j v_j + \sum\limits_{\substack{i=1\\i\not=j}}^{n} \lambda_i v_i = 0
+\\ &\Leftrightarrow \lambda_j v_j = - \sum\limits_{\substack{i=1\\i\not=j}}^{n} \lambda_i v_i
+\\ &\Leftrightarrow v_j = - \sum\limits_{\substack{i=1\\i\not=j}}^{n} \frac{\lambda_i}{\lambda_j} v_i \in\, \langle B\, \backslash \{v_j\}\rangle_K
+\end{align*}
+Der Vektor $v_j$ liegt in $B \, \backslash \, \{v_j\}$. Wir benötigen, um den Widerspruch zu erhalten, einen Zwischenbeweis, der aussagt, dass die Menge $B \, \backslash \, \{v_j\}$ entgegen der Minimalität ein \acl{EZS} ist.
+\par
+\begingroup
+\leftskip=2cm
+\noindent
+\\Zw.vor.: \(v_j \in B \, \backslash \, \{v_j\}\text{, also} \, v_j \cup B \, \backslash \, \{v_j\} \, \text{linear abhängig.} \)
+\\Zw.beh.:$B \, \backslash \, \{v_j\}$ ist ein \acl{EZS}
+\\Zw.bew.: Angenommen, $B \, \backslash \, \{v_j\}$ sei kein \acl{EZS}. Dann gibt es ein $v_j \notin B \, \backslash \, \{v_j\}$ für $k\in\{1,...,n\}$. Daraus folgt allerdings: Die Menge $B \, \backslash \, \{v_j\} \cup v_j = B \cup {v_j} $ ist \acl{linunab}, was der Voraussetzung, dass $B \cup {v_j}$ \acl{linab} ist, widerspricht.\footnote{Zw.bew. ist eigens vom Verfasser geführt worden.}
+\\ 
+\par
+\endgroup
+Daher ist $B \, \backslash \, \{v_j\}$ ein \acl{EZS}, was im Gegensatz zu der \textbf{Minimalität des \acl{EZS}s} von $B$ steht. Also ist $B$ linear unabhängig.
+\\Es ist noch zu zeigen , dass $B$ \emph{maximal} \acl{linunab} ist. 
+\\Angenommen, $B$ ist keine maximal \acl{linunab}e Teilmenge.
+Dann gibt es ein $v \in V$, sodass \( B \cup \{v\}\,\text{\acl{linunab} ist}\)\, \textendash \, $v$ wäre nicht im Span von $B$\, \textendash, aber $B$ \textbf{erzeugt} laut Voraussetzung alle Vektoren in $V$, somit gilt $v \in \langle B \rangle$, was der Widerspruch ist. Daraus folgt, dass $B$ \emph{maximal} \acl{linunab} ist. (vgl. \cite[S. 41, 9.16 (b) $\Rightarrow$ (c)]{Skript})
+\\
+\\ Vor.: B ist ein \text{maximale} \acl{linunab}e Teilmenge.
+\\ Beh.: (iii) $\Rightarrow$ (i) 
+\\ Bew.: Es sind zwei Tatsachen zu zeigen, zum einen dass aus (iii) die Lineare Unabhängigkeit von $B$ folgt, was offensichtlich aus der Voraussetzung folgt, und zum anderen dass $B$ ein \acl{EZS} ist. 
+\\ Angenommen, $B$ ist kein \acl{EZS}. Dann gibt es ein $v \in V$, sodass $v \notin \langle B \rangle$ gilt, also nicht im Erzeugnis von $B$ liegt. Daraus folgt, dass $\{v\} \cup B$ linear unabhängig ist, was der \textbf{Maximalität} von $B$ widerspricht. (vgl. \cite[S. 59]{Beutel}) 
+\end{proof}
+
+\theoremstyle{definition}
+\begin{definition}{\textbf{Dimension eines \acl{VR}s}}
+	\\"Ist $B$ eine Basis eines endlich erzeugten \acl{VR}s $V$, so nennt man $n := |B| \in \mathbb{N}_0$ die Dimension von $V$. Wir schreiben dafür $\dim(V)= n$. Ist $V$ nicht endlich erzeugt, so setzen wir $\dim(V):= \infty$." \cite[S. 504]{Enzy}
+\end{definition}
+
+\theoremstyle{definition}
+	\label{def:Ev}
+	\begin{definition}{\textbf{\aclp{Ev}}}
+	\\"Dabei sei $e_i \in K^n$ für $i = 1,...,n$ der $i$-te \acl{Ev}, also 
+	\[e_i = (0,...,0,1,0,...,0)\text{,}\]
+	wobei die 1 genau an der $i$-ten Stelle steht. Auf präzisere Weise können wir
+	\[\text{[...]} \, [e_i = (\delta_{1i},\delta_{2i},...,\delta_{ii},...,\delta_{ni})]\]%Soll ich direkt oder inidir zitieren???? Bosch S.31
+	schreiben mit 
+	\[\delta_{hi}= \begin{cases} 1 \, \text{für} \: h = i \\ 0 \: \text{[...] [für} \, h\not=i] \end{cases}\]
+	$\delta_{hi}$ ist das so genannte \emph{Kronecker-Symbol}.[\footnote{Nur wenn beide Indizes gleich sind ,dann $\delta_{ii}=1$}]" \cite[S. 31]{Bosch}
+	\end{definition} 
+
+\theoremstyle{example}
+\begin{example}{Einheitsvektoren}
+\\ In der Abbildung \ref{UVR} siehen wir die \aclp{Ev} des \acl{R2}, die zudem auch eine Basis bilden. Nun werden wir die Standardbasisvektoren für den $K^n$-\acl{VR} für jedes $n \in \mathbb{N}$ kennenlernen.
+Es ist noch zu zeigen, dass die \aclp{Ev} eine Basis bilden. Hierzu nutzen wir die Eigenschaften aus (\ref{Basis1}) des Theorems \ref{theo:Basis}:
+"Es ist $\{e_1,...,e_n\}$ ein \acl{EZS} von $K^n$ (denn für $v =(\lambda_1,...,\lambda_n) \in K^n$ ist $v = \sum \limits_{i=1}^{n} \lambda_i e_i)$.\grqq" \cite[S. 40, 9.9]{Skript}
+%Erklärung??
+\\"In $K^n$ sind die \aclp{Ev} $e_1,...,e_n$ \acl{linunab}: \[0=\sum \limits_{i=1}^{n} \lambda_i e_i = (\lambda_1,...,\lambda_n)\text{.}\]
+Aus der Definition \ref{def:Ev} folgt: $\lambda_1=...=\lambda_n=0$." \cite[S. 41, 9.14]{S. 41}
+%Erklärung!!! Skript 9.14
+\\ Somit ist ${e_1,...,e_n}$ eine Basis von $K^n$. Wir bezeichnen sie auch als "kanonische Basis" \cite[S. 42, 9.17]{Skript} . Daraus folgt, dass "$dim(K^n) = n$" \cite[S. 44, 9.24 (a)]{Skript} ist.
+%Letzter satz aus Skript 9.23 Beispiel (b)
+%Skript 9.17
+\end{example}
+
+\section{Dimensionen}
+\label{sec:Dimensionen}
+
+
+\section{Dimensionsformeln}
+\label{sec:Dim.formel}
+%Rangsatz und lineare Abbildungen, aber wozu?
