@@ -1,0 +1,125 @@
+%Dokumentklasse
+\documentclass[a4paper,12pt]{scrreprt}
+\usepackage[left= 2.5cm,right = 2cm, bottom = 4 cm]{geometry}
+\usepackage[onehalfspacing]{setspace}
+% ============= Packages =============
+
+% Dokumentinformationen
+\usepackage[
+	pdftitle={Einblick in höhere Dimensionen},
+	pdfsubject={},
+	pdfauthor={Hanifah Muhammad},
+	pdfkeywords={},	
+	%Links nicht einrahmen
+	hidelinks
+]{hyperref}
+
+
+
+% Standard Packages
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx, subfig}
+\graphicspath{{img/}}
+\usepackage{fancyhdr}
+\usepackage{lmodern}
+\usepackage{color}
+\usepackage{tkz-euclide}
+\usepackage[nolist]{acronym} %Abkürzungen
+\usepackage{sidecap}
+
+% zusätzliche Schriftzeichen der American Mathematical Society
+\usepackage{amsfonts}
+\usepackage{amsmath}
+	\DeclareMathOperator{\Abb}{Abb}
+\usepackage{amsthm}
+\usepackage{stmaryrd}
+
+% Gänsefüßchen
+\usepackage{csquotes}
+\MakeOuterQuote{"}
+
+%Für Vektorpraphiken
+\usepackage{transparent}
+\graphicspath{{Bilder/}}
+
+
+
+%================== amsthm ====================
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{preremark}{Definition}
+\newenvironment{Definition}{\begin{preremark}\upshape}{\end{preremark}}
+\newtheorem{example}[definition]{Beispiel}
+\newtheorem{bem}[definition]{Bemerkung}
+\newtheorem{theo}[definition]{Theorem}
+\newtheorem{Satz}[definition]{Satz}
+\newtheorem{Corollar}[definition]{Corollar}
+\newtheorem{prop}[definition]{Proposition}
+\newtheorem{Lemma}[definition]{Lemma}
+
+
+
+%nicht einrücken nach Absatz
+\setlength{\parindent}{0pt}
+
+
+% ============= Kopf- und Fußzeile =============
+\pagestyle{fancy}
+%
+\lhead{}
+\chead{}
+\rhead{\slshape \leftmark}
+%%
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+%%
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\figurename}{Abb.}
+% ============= Package Einstellungen & Sonstiges ============= 
+%Besondere Trennungen
+\hyphenation{De-zi-mal-tren-nung}
+
+% ============= Modifikationen von Aufzählungen ===============
+\renewcommand\theenumi{\roman{enumi}}
+\renewcommand\labelenumi{(\theenumi)}
+
+
+
+% ============= Dokumentbeginn =============
+
+\begin{document}
+%Seiten ohne Kopf- und Fußzeile sowie Seitenzahl
+\pagestyle{plain}
+
+\include{01_titel}
+
+% Beendet eine Seite und erzwingt auf den nachfolgenden Seiten die Ausgabe aller Gleitobjekte (z.B. Abbildungen), die bislang definiert, aber noch nicht ausgegeben wurden. Dieser Befehl fügt, falls nötig, eine leere Seite ein, sodaß die nächste Seite nach den Gleitobjekten eine ungerade Seitennummer hat. 
+\cleardoubleoddpage
+
+% pagestyle für gesamtes Dokument aktivieren
+\pagestyle{fancy}
+
+%Inhaltsverzeichnis
+\tableofcontents
+
+%Verzeichnis aller Bilder
+\listoffigures
+
+%Verzeichnis aller Tabellen
+\listoftables
+\include{011_abkuerzungen}
+\include{02_Einleitung}
+\include{021_Visualisierung}
+\include{03_AlgebraischeStrukturen}
+\include{04_Dimensionen}
+\include{041_unendlichdimensionaleVRs}
+\include{05_Schluss}
+%Literaturverzeichnis
+\bibliographystyle{unsrtdin}
+\bibliography{Literatur}
+
+\end{document}
