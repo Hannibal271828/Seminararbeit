@@ -1,0 +1,23 @@
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\contentsline {chapter}{\numberline {1}Abstraktion und Formalismus}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}Der Kerngedanke der Mathematik}{5}{section.1.1}
+\contentsline {section}{\numberline {1.2}Stufen der Abstraktion}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}mathematische Sprache}{6}{section.1.3}
+\contentsline {chapter}{\numberline {2}Visualaisierung h\IeC {\"o}herer Dimensionen}{8}{chapter.2}
+\contentsline {section}{\numberline {2.1}Koordinatensysteme}{8}{section.2.1}
+\contentsline {section}{\numberline {2.2}Konstruktion eines Hyperw\IeC {\"u}rfels}{8}{section.2.2}
+\contentsline {chapter}{\numberline {3}Algebraische Strukturen}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}Gruppen}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}K\IeC {\"o}rper}{13}{section.3.2}
+\contentsline {chapter}{\numberline {4}Vektorr\IeC {\"a}ume}{14}{chapter.4}
+\contentsline {section}{\numberline {4.1}Vektorr\IeC {\"a}ume}{14}{section.4.1}
+\contentsline {section}{\numberline {4.2}\aclp {EZS}}{16}{section.4.2}
+\contentsline {section}{\numberline {4.3}Basis}{18}{section.4.3}
+\contentsline {chapter}{\numberline {5}unendliche Dimension}{22}{chapter.5}
+\contentsline {section}{\numberline {5.1}Funktionenvektorraum}{22}{section.5.1}
+\contentsline {section}{\numberline {5.2}Polynomvektorraum}{24}{section.5.2}
+\contentsline {section}{\numberline {5.3}unendlichdimensionale \aclp {VR}}{27}{section.5.3}
+\contentsline {chapter}{\numberline {6}Schluss}{29}{chapter.6}
+\contentsline {section}{\numberline {6.1}Zusammenfassung}{29}{section.6.1}
+\contentsline {section}{\numberline {6.2}Weiterf\IeC {\"u}hrung}{29}{section.6.2}

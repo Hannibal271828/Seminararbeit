@@ -1,0 +1,42 @@
+\chapter{Visualaisierung höherer Dimensionen}
+\label{sec:Visualisierung}
+
+\section{Koordinatensysteme}
+
+Um ein "Bild" von der vierten räumlichen Dimension\footnote{Wir sprechen hier nicht wie in der allgemeinen Relativitätstheorie von der vierten Dimension als die Zeit.} zu bekommen, machen wir ein kleines Gedankenexperiment: Wir beginnen mit einem nulldimensionalen Punkt. Dieser wird im nächsten Schritt unendlich oft in die erste Dimension, also nach rechts und links, verschoben, sodass eine eindimensionale Gerade entsteht. Diese soll den Zahlenstrahl $\mathbb{R}$ darstellen. Anschließend stellen wir uns eine Gerade vor, die senkrecht zu der reelen Zahlengeraden steht. Wir erhalten das zweidimensionale kartesische Koordinatensystem $\mathbb{R}^2$ (vgl. \ref{KoS}). Fügen wir eine dritte  Gerade, die zu den letzteren orthogonal steht, hinzu, erhalten wir das dreidimensionale Koordinatensystem $\mathbb{R}^3$ (vgl. \ref{KoS}). Führen wir den Gedanken ($n$ mal) fort, bekommen wir den $\mathbb{R}^4$ bzw. den $\mathbb{R}^n$ (siehe \ref{exampleVR}), die wir uns allerdings nicht vorstellen können. Unser Gehirn vermag keine Vorstellung der vierten Richtung, die als "ana und kata" bezeichnet wird.\footnote{Uns sind oben, unten, rechts, links, vorne und hinten bekannt, was alle Richtungen unserer dreidimensionale Welt beschreibt.}   %Quelle Michio S.127 also ana und kata
+\begin{quote}
+"Ein Mensch, der seine Existenz dem widmet, schafft es vielleicht, sich die vierte Dimension auszumalen."
+\begin{flushright}
+\textsc{Henri Poincaré}
+\end{flushright}
+\end{quote}
+Für die $n$-te Richtung kann sich der Leser eigens einen Namen definieren. In Kapitel \ref{sec:VR} und \ref{sec:unendliche VRs} werden wir lernen, wie wir die visuelle Vorstellung durch eine mathematische "formale" Interpretation ersetzen.
+
+\section{Konstruktion eines Hyperwürfels}
+Wir wollen im Folgenden einen $n$-dimensionalen für Würfel $n\in \mathbb{N}_0$ bauen.
+\begin{definition} {Hyperwürfel}
+\\ Es sei ein $(n-1)$-dimensionaler Würfel. Dieser wird in die $n$-te (nächsthöhere) Dimension um eine Längeneinheit verschoben. Die gleichen Ecken werden miteinander verbunden. So erhalten wir einen $n$-dimensionalen Würfel.
+\end{definition}
+
+Wir beginnen mit einem nulldimensionalen Würfel, einem Punkt.
+Anschließend verschieben wir ihn um eine Längeneinheit in die Länge, die erste Dimension, und verbinden die beiden Endpunkte. Nun erhalten wir eine Linie mit zwei Ecken. 
+Danach wird sie in die Breite, die zweite Dimension, verschoben, sodass wir ein Quadrat nach der Verbindung der Eckpunkte bekommen. Verschiebt man im nächsten Schritt das Quadrat in die Tiefe, die dritte Dimension, und fügen die gleichen Ecken zusammen, wird es zu einem Würfel. Machen wir analog weiter, indem wir den Würfel nach "ana" also in die vierte Dimension verschieben und die Ecken verknüpfen,  entsteht ein \emph{Tesserakt} (siehe Modell 1). Natürlich lässt sich diese Konstruktion ("nach den Gesetzen der Analogie") beliebig oft weiterführen bis man schließlich einen $n$-dimensionalen Hyperwürfel erhält. 
+\begin{figure}[h]
+\centering
+\input{Bilder/Wuerfel.pdf_tex}
+\caption{Quelle: Wikipedia Tesserakt}
+\label{Wuerfel}
+\end{figure}
+
+\indent Wir wollen nun die Anzahl der Ecken ermitteln: Der nulldimensionale Würfel besteht aus einem Eck, der eindimensionale aus zwei, der dreidimensionale aus 8. "1, 2, 4, [8] stellen offensichtlich eine geometrische Reihe dar." (Quelle: Flatland S.88) Somit hat der Tesserakt 16 und der $n$-dimensionale Würfel $2^n$ Ecken. 
+\\ \indent Ein $n$-dimensionaler Würfel wird von $2n$ $(n-1)$-Würfeln begrenzt. Der nulldimensionale Würfel hat keine Grenzwürfel. Die Linie hat zwei Punkte als Enden. Die Grenzflächen des Quadrats sind die vier Seiten. Der Würfel wird er von sechs Quadraten begrenzt. "0, 2, 4, [6]" bilden eine "arithmetische" Reihe. Analog lässt sich berechnen, dass der vierdimensionale Würfel aus acht normalen Würfel besteht.\footnote{Diese können in Modell 1 und 4 nachgezählt werden.} Deshalb wird der Tesserakt auch als Octachoron (\textit{griech.} Achtzeller) (vgl. Ingo und Matthias Vortrag) bezeichnet.
+
+
+
+\subsection*{Der Tesserakt}
+	\subsubsection*{Faltung}
+		 Die Faltung eines Tesserakts erfolgt analog wie die eines Würfels. Um sich das zu visualisieren, werden die Modelle 2 (zweidimenaionales Würfelnetz eines Würfels) und 3 (dreidimenionales Würfelnetz eines Octachoron) zur Verfügung gestellt. Sowie man einen Würfel erhält, indem man alle roten Quadrate des Modells 2 nach oben faltet, sodass sich das blaue direkt gegenüber dem gelben befindet, wäre es möglich die roten Würfel von Modell 3 nach "ana" zu falten, sodass der blaue gegenüber dem gelben\footnote{Ein roter Würfel lässt sich entfernen, damit man den innenliegenden gelben sehen kann.} läge. Im Anhang sieht man Animationen der Faltung eines Würfels und eines Tesserakts.
+\subsubsection*{4d-Perspektive}
+Es gibt auch eine andere dreidimensionale Darstellungweise als bei Modell 1, nämlich mit 4d-Perspektive. Sie funktioniert genauso wie die 3d-Perspektive. Weiter vom Betrachter entfernte Objekte werden kleiner gezeichnet. In Modell 4 ist der kleine Würfel im Inneren weiter in "ana"-Richtung entfernt. %Zitat Matts video
+
+
