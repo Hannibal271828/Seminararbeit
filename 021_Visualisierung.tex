@@ -1,0 +1,52 @@
+\chapter{Visualisierung höherer Dimensionen}
+\label{sec:Visualisierung}
+\begin{quote}
+"Ein Mensch, der seine Existenz dem widmet, schafft es vielleicht, sich die vierte Dimension auszumalen."
+\begin{flushright}
+\textsc{Henri Poincaré}
+\end{flushright}
+\end{quote}
+
+\section{Koordinatensysteme}
+\label{sec:KoS}
+Um ein "Bild" von der $n$-ten Dimension zu bekommen, machen wir ein kleines Gedankenexperiment\footnote{Entnommen und weiter ausgeführt aus \cite[S. 71 f.]{Michio}} Wir beginnen mit einem Punkt, welcher per Definition nulldimensional ist. Dieser wird im nächsten Schritt unendlich oft in die erste Dimension, also nach rechts und links, verschoben, sodass eine eindimensionale Gerade entsteht. Diese soll den Zahlenstrahl $\mathbb{R}$ darstellen. Anschließend stellen wir uns eine Gerade vor, die senkrecht zu der reellen Zahlengeraden steht. Wir erhalten das zweidimensionale kartesische Koordinatensystem $\mathbb{R}^2$. Fügen wir eine dritte Gerade hinzu, die zu den letzteren orthogonal steht,  erhalten wir das dreidimensionale Koordinatensystem $\mathbb{R}^3$. 
+Nehmen wir eine vierte zu allen anderen senkrecht stehenden Geraden hinzu, entsteht das vierdiemnsionale $\mathbb{R}^4$. Dieses Gedankenexperiment lässt sich beliebig oft weiterführen, bis man den $n$-dimensionalen $\mathbb{R}^n$ bekommt. Wir können uns diese Koordinatensysteme jedoch nicht visuell vorstellen.
+\\ \indent Um dennoch ein intuitives Verständnis für die räumliche vierte Dimension zu bekommen, nutzen wir die von dem Mathematiker \textsc{Charles Hinton} geprägten Begriffe "ana"\footnote{\textit{griech.} auf} und "kata"\footnote{\textit{griech.} herab} für die vierdimensionalen Analoga zu oben, unten, rechts, links, vorne und hinten (die Richtungen unserer dreidimensionalen Welt). In Kapitel \ref{sec:LA} und \ref{sec:unendliche VRs} werden wir lernen, wie wir die visuelle Vorstellung durch eine elegantere mathematisch \emph{formale} Darstellung ersetzen.
+
+
+\newpage
+\section{Konstruktion eines Hyperwürfels}
+\begin{definition} (\emph{Hyperwürfel}) Es sei ein $(n-1)$-dimensionaler Würfel. Dieser wird in die $n$-te Dimension um eine Längeneinheit verschoben. Die gleichen Ecken werden miteinander verbunden. So erhalten wir einen $n$-dimensionalen Würfel.
+\end{definition}
+
+\begin{figure}[h]
+\centering
+\input{Bilder/Wuerfel.pdf_tex}
+\caption{Visuelle Konstruktion eines Hyperwürfels}
+\label{Wuerfel}
+\end{figure}
+
+Wir beginnen mit einem nulldimensionalen Würfel, der ein Punkt bzw. ein Eck ist.
+Anschließend verschieben wir ihn um eine Längeneinheit in die Länge, die erste Dimension, und verbinden die beiden Endpunkte. Nun erhalten wir eine Linie mit zwei Ecken. 
+Danach wird sie in die Breite, die zweite Dimension, verschoben, sodass wir ein Quadrat nach der Verbindung der Eckpunkte bekommen. Verschiebt man im nächsten Schritt das Quadrat in die Tiefe, die dritte Dimension, und fügt die gegenüberliegenden Ecken zusammen, wird es zu einem Würfel. Machen wir analog weiter, indem wir den Würfel nach "ana", also in die vierte Richtung, verschieben und die Ecken verknüpfen,  entsteht ein \emph{Tesserakt} (siehe Modell 1 und Abbildung \ref{Wuerfel}). Natürlich lässt sich diese Konstruktion beliebig oft weiterführen, bis man schließlich einen $n$-dimensionalen Hyperwürfel erhält.\footnote{Diese Idee ist von dem Video \cite{Ted} inspiriert.}
+\\ \indent Wir wollen nun die Anzahl der Ecken ermitteln: Der nulldimensionale Würfel besteht aus einem Eck, der eindimensionale aus zwei, der dreidimensionale aus 8. "1, 2, 4, [8] stellen offensichtlich eine geometrische Reihe dar" \cite[S. 88]{Flatland}. Somit hat der Tesserakt 16 und der $n$-dimensionale Würfel $2^n$ Ecken. 
+\\ \indent Ein $n$-dimensionaler Würfel wird von $2n$ Würfeln mit $(n-1)$ Dimensionen begrenzt. Der nulldimensionale Würfel hat keine Grenzwürfel. Die Linie hat zwei Punkte als Enden. Die Grenzflächen des Quadrats sind die vier Seiten. Der 3d-Würfel wird er von sechs Quadraten begrenzt. "0, 2, 4, [6]" \cite[S. 89]{Flatland} bilden eine arithmetische Reihe. Analog lässt sich berechnen, dass der vierdimensionale Würfel aus acht normalen Würfel besteht. Deshalb wird der Tesserakt auch als Octachoron (\textit{griech.} Achtzeller) bezeichnet.
+
+
+\newpage
+\section[Tesserakt]{Der Tesserakt\footnote{Die in diesem Abschnitt erläuterrten Visualisierungmöglichkeiten sind aus dem Vortrag \cite{Matt}.}}
+	\subsection*{Faltung}
+		 Die Faltung eines Tesserakts erfolgt analog wie die eines Würfels. Um sich das zu visualisieren, werden die Modelle 2 (zweidimensionales Würfelnetz eines Würfels) und 3 bzw. Abbildung \ref{Tesserakt}\footnote{vgl. \cite{Wuerfelnetz}} (dreidimenionales Würfelnetz eines Octachoron) und die Animation mit der Faltung eines Tesserakts zur Verfügung gestellt.
+		 \\ \indent Sowie man einen Würfel erhält, indem man alle roten Quadrate des Modells 2 nach oben faltet, sodass sich das blaue direkt gegenüber dem gelben befindet, wäre es möglich die roten Würfel von Modell 3 bzw. Abbildung \ref{Tesserakt} nach "ana" zu falten, sodass der blaue gegenüber dem gelben\footnote{Ein roter Würfel lässt sich auf die Seite klappen, damit man den innenliegenden gelben sehen kann.} läge. 
+
+\begin{figure}[h]
+\centering
+\input{Bilder/Wuerfelnetz.pdf_tex}
+\caption[lala]{Das 3d-Würfelnetz eines Tesserakts}
+\label{Tesserakt}
+\end{figure} 
+		 
+	\subsection*{4d-Perspektive}
+Es gibt auch eine andere dreidimensionale Darstellungsweise als bei Modell 1, nämlich mit 4d-Perspektive. Sie funktioniert genauso wie die 3d-Perspektive. Weiter vom Betrachter entfernte Objekte werden kleiner gezeichnet. In Modell 4 und auf dem Titelbild\footnote{siehe \cite{Titelbild}} ist der kleine Würfel im Inneren weiter in "ana"-Richtung entfernt. 
+
+
