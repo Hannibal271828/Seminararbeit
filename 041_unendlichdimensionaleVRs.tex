@@ -1,6 +1,6 @@
 \chapter{Unendlichdimensionale Vektorräume}
 \label{sec:unendliche VRs}
-Dieses Kapitel stellt die Schnittstelle zwischen linearer Algebra und Funktionalanalysis dar, welche sich mit unendlichdimensionalen \aclp{VR} beschäftigt. 
+Dieses Kapitel stellt die Schnittstelle dar zwischen linearer Algebra und Funktionalanalysis, welche sich mit unendlichdimensionalen \aclp{VR} beschäftigt. 
 \section{Funktionenvektorraum}
 
 \begin{Satz} vgl.\,\cite[S. 28 f., 6.2]{Skript} (\emph{Der reelle Funktionenraum}) \label{funktionenraum}Die Menge aller reellen Funktion\footnote{In der Schule behandeln wir ausschließlich reelle Funktionen mit der Defintions- und Wertemenge $\mathbb{R}$.}
@@ -17,7 +17,7 @@ bilden einen \acl{VR} über den Körper der reellen Zahlen $\mathbb{R}$ mit folg
 \end{enumerate}
 \end{Satz}
 
-Anstatt Vektoren als Verschiebungvorschriften von Punkten wie in $\mathbb{R}^2$ oder $\mathbb{R}^2$ hat der Funktionenraum einzelne Funktionen als "Vektoren", die sich genauso addieren und skalamultiplizieren lassen.
+Anstatt Vektoren als Verschiebungvorschriften von Punkten wie in $\mathbb{R}^2$ oder $\mathbb{R}^2$, hat der Funktionenraum einzelne Funktionen als "Vektoren", die sich genauso addieren und skalamultiplizieren lassen.
 \newpage
 \begin{example}
 Wird eine Funktion mit einer Konstanten addiert, wird sie in $y$-Richtung nach oben (wie in Abbildung \ref{fig:fadd}) oder nach unten verschoben.
@@ -114,7 +114,7 @@ Vor.: Pplynomaddition und -skalarmultiplikation aus \ref{PVR}.
 \\ Seien $u(x)=\sum\limits_{i=0}^{n} \zeta_i x^i\text{,}\; v(x) = \sum\limits_{i=0}^{n} \eta_i x^i \in \acl{RX}$ beliebig.
 \begin{enumerate}
 \item Zu zeigen gilt, dass der Nullvektor ein Element von $\acl{RX}$ ist. Sei $\rho = 0$. \[\rho \cdot u(x)= 0 \cdot \sum\limits_{i=0}^{n} \zeta_i x^i = 0_{\Abb}(x) \Rightarrow 0_{\Abb}(x) \in \acl{RX}\]
-\item Es gilt die Abgeschlossenheit der Polynomaddition zu beweisen.
+\item Es gilt, die Abgeschlossenheit der Polynomaddition zu beweisen.
 \\ \[ (u+v)(x)=u(x) + v(x) = \sum\limits_{i=0}^{n} \zeta_i x^i+\sum\limits_{i=0}^{n} \eta_i x^i =\sum\limits_{i=0}^{n} (\zeta_i+ \eta_i )x^i \in \acl{RX} \]
 \item Die Skalarmultiplikation soll auf ihre Abgeschlossenheit hin getestet werden. Sei $\varrho \in \mathbb{R}$ beliebig.
 \[(\varrho \cdot u)(x) = \varrho \cdot u(x)= \varrho \cdot \sum\limits_{i=0}^{n} \zeta_i x^i\ = \sum\limits_{i=0}^{n} \varrho \cdot \zeta_i x^i \in \acl{RX}\qedhere\]
